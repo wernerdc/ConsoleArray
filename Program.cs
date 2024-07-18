@@ -26,6 +26,7 @@
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Black;
+
                 }
                 Console.Write(randomNums[i] + " ");           
             }
