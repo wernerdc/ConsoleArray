@@ -12,24 +12,9 @@
             Console.WriteLine("ConsoleArray \n");
 
             int[] randomNums = GetRandomNumsArray(20);
-
-            for (int i = 0; i < randomNums.Length; i++)
-            {
-                if (randomNums[i] % 2 == 0)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-
-                }
-                Console.Write(randomNums[i] + " ");           
-            }
-
+            ShowRandomNumsInConsole(randomNums);
 
             Console.ReadLine();
-
         }
 
         static private int[] GetRandomNumsArray(int size)
@@ -43,6 +28,23 @@
             }
 
             return randomNums;
+        }
+
+        private static void ShowRandomNumsInConsole(int[] numArray)
+        {
+            for (int i = 0; i < numArray.Length; i++)
+            {
+                if (numArray[i] % 2 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                }
+                Console.Write(numArray[i] + " ");
+            }
         }
     }
 }
